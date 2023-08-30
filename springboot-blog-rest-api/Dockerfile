@@ -1,5 +1,5 @@
 # Use the official OpenJDK 11 base image
-FROM openjdk:11-jdk-slim
+FROM openjdk:17-jdk-slim
 
 # Arguments for the JAR file
 ARG JAR_FILE=target/*.jar
