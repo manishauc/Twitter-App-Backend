@@ -1,5 +1,6 @@
-CREATE DATABASE twitter_app_db;
-
+CREATE DATABASE latest_twitter_db;
+SHOW databases;
+USE latest_twitter_db;
 DROP TABLE IF EXISTS `roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -9,8 +10,14 @@ CREATE TABLE `roles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `twitter_app_db`.`roles` (`id`, `name`) VALUES ('1', 'ROLE_USER');
-INSERT INTO `twitter_app_db`.`roles` (`id`, `name`) VALUES ('2', 'ADMIN');
+INSERT INTO `latest_twitter_db`.`roles` (`id`, `name`) VALUES ('1', 'ROLE_USER');
+INSERT INTO `latest_twitter_db`.`roles` (`id`, `name`) VALUES ('2', 'ADMIN');
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 DROP TABLE IF EXISTS `user_roles`;
